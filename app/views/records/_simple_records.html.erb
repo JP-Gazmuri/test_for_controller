@@ -1,0 +1,27 @@
+<div class="card border-dark mb-3 separation">
+  <div class="card-header">
+    <div class="row">
+      <div class="col-6">
+          Status: <%= simple_records.status%>
+      </div>
+      <div class="col-6">
+          Locker: <%= simple_records.locker%>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+        <div class="card-body text-dark">
+            <h5 class="card-title">Contraseña de depósito</h5>
+            <p class="card-text"> <%= simple_records.password_deposit %> </p>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="card-body text-dark">
+            <h5 class="card-title">Contraseña de retiro</h5>
+            <p class="card-text"> <%= simple_records.password_retire %> </p>
+        </div>
+    </div>
+  </div>
+</div>

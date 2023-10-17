@@ -4,7 +4,11 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
-  resources :tests
+  resources :tests do
+    post 'comunicate', on: :collection
+  end
 
-  root "tests#index"
+  resources :records
+
+  root "records#index"
 end

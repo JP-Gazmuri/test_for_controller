@@ -1,0 +1,25 @@
+<h3>Crear registro</h3>
+
+<%=form_with model: @record do |f|%>
+
+    <div class="form-row separation">
+        <div class="form-group col-6">
+            <%= f.label :password_deposit, "Contraseña depósito" %><br />
+            <%= f.text_field :password_deposit,placeholder: 'Número de 6 cifras ej: 038174', class: "form-control"%>
+        </div>
+    </div>
+
+    <div class="form-row separation">
+        <div class="form-group col-6">
+            <%= f.label :password_retire, "Contraseña retiro" %><br />
+            <%= f.text_field :password_retire,placeholder: 'Número de 6 cifras ej: 038174', class: "form-control"%>
+        </div>
+    </div>
+
+    <div class="form-group separation">
+        <%= f.label :Locker %>
+        <%= f.select :locker, options_for_select([1, 2, 3]), class: 'form-control' %>
+    </div>
+
+    <%=f.submit 'Guardar', class:'btn btn-primary'%>
+<%end%>

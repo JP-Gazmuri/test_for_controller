@@ -10,6 +10,10 @@ class TestsController < ApplicationController
       end
     end
 
+    def comunicate
+      byebug
+    end
+
     def index
       
     end
