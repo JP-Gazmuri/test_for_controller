@@ -1,7 +1,11 @@
 class RecordsController < ApplicationController
     
     def index
-        @records = Record.all.order(created_at: :desc)
+        @records = []
+        @records<<Record.where(locker: 1).last()
+        @records<<Record.where(locker: 2).last()
+        @records<<Record.where(locker: 3).last()
+
     end
 
     def show

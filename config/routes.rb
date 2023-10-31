@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   resources :tests do
-    post 'comunicate', on: :collection
+    get 'start', on: :collection
+    get 'get_pass', on: :collection
   end
 
   resources :records
